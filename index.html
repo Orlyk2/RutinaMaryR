@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 <title>miRutinaPersonal | Mariela Rocha</title>
 
 <meta property="og:title" content="miRutinaPersonal | Bienestar y Rutinas" />
-<meta property="og:description" content="Rutinas suaves, seguimiento diario y bienestar para Mariela Rocha." />
+<meta property="og:description" content="Rutinas suaves, seguimiento diario y bienestar." />
 <meta property="og:type" content="website" />
 
 <style>
@@ -39,6 +40,7 @@ body{
   padding:30px 20px;
   box-shadow:0 20px 50px rgba(0,0,0,.08);
   z-index:1000;
+  overflow-y:auto;
 }
 
 .logo{
@@ -89,8 +91,10 @@ body{
 /* HERO */
 
 .hero{
-  background:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),
+  background:
+  linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),
   url('https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=1600');
+
   background-size:cover;
   background-position:center;
   border-radius:35px;
@@ -113,7 +117,7 @@ body{
 /* SECTION */
 
 .section{
-  margin-top:45px;
+  margin-top:50px;
 }
 
 .section-title{
@@ -133,7 +137,7 @@ body{
 /* CARD */
 
 .card{
-  background:rgba(255,255,255,.85);
+  background:rgba(255,255,255,.88);
   backdrop-filter:blur(10px);
   border-radius:28px;
   padding:28px;
@@ -274,6 +278,7 @@ body{
 }
 
 @keyframes pulse{
+
   0%{
     box-shadow:0 0 0 0 rgba(236,72,153,.5);
   }
@@ -285,6 +290,7 @@ body{
   100%{
     box-shadow:0 0 0 0 rgba(236,72,153,0);
   }
+
 }
 
 /* RESPONSIVE */
@@ -328,8 +334,9 @@ body{
     <a href="#diagnostico">📋 Diagnóstico Diario</a>
     <a href="#rutinas">💪 Rutinas</a>
     <a href="#salud">❤️ Salud</a>
-    <a href="#progreso">📈 Progreso</a>
+    <a href="#progreso">📈 Seguimiento</a>
     <a href="#pqrs">📄 Test PAR-Q+</a>
+    <a href="#vinculacion">🌟 Rutina Personalizada</a>
   </div>
 
   <div class="patient-box">
@@ -355,6 +362,8 @@ body{
 <!-- MAIN -->
 
 <div class="main">
+
+<!-- HERO -->
 
 <section class="hero" id="inicio">
 
@@ -414,9 +423,15 @@ body{
 
       <label>Observaciones</label>
 
-      <textarea rows="5" placeholder="Escribe cómo se siente hoy..."></textarea>
+      <textarea
+      id="observaciones"
+      rows="5"
+      placeholder="Escribe cómo se siente hoy...">
+      </textarea>
 
-      <button class="btn" onclick="enviarDiagnostico()">
+      <button
+      class="btn"
+      onclick="enviarDiagnostico()">
         Enviar
       </button>
 
@@ -436,8 +451,6 @@ body{
 
   <div class="grid">
 
-    <!-- LUNES -->
-
     <div class="rutina">
 
       <h4>Lunes</h4>
@@ -451,15 +464,14 @@ body{
         <li>Caminata suave – 10 minutos</li>
       </ul>
 
-      <a href="https://www.youtube.com/watch?v=4BOTvaRaDjI"
+      <a
+      href="https://www.youtube.com/watch?v=4BOTvaRaDjI"
       target="_blank"
       class="btn">
         Iniciar Rutina
       </a>
 
     </div>
-
-    <!-- MIÉRCOLES -->
 
     <div class="rutina">
 
@@ -474,15 +486,14 @@ body{
         <li>Movilidad de hombros</li>
       </ul>
 
-      <a href="https://www.youtube.com/watch?v=VHyGqsPOUHs"
+      <a
+      href="https://www.youtube.com/watch?v=VHyGqsPOUHs"
       target="_blank"
       class="btn">
         Iniciar Rutina
       </a>
 
     </div>
-
-    <!-- VIERNES -->
 
     <div class="rutina">
 
@@ -497,7 +508,8 @@ body{
         <li>Ejercicios con balón</li>
       </ul>
 
-      <a href="https://www.youtube.com/watch?v=8CE4ijWlQ18"
+      <a
+      href="https://www.youtube.com/watch?v=8CE4ijWlQ18"
       target="_blank"
       class="btn">
         Iniciar Rutina
@@ -556,7 +568,7 @@ body{
 
 </section>
 
-<!-- PROGRESO -->
+<!-- SEGUIMIENTO -->
 
 <section class="section" id="progreso">
 
@@ -573,7 +585,9 @@ body{
       caminatas, presión arterial y evolución.
     </p>
 
-    <button class="btn" onclick="guardarProgreso()">
+    <button
+    class="btn"
+    onclick="guardarProgreso()">
       Guardar progreso
     </button>
 
@@ -581,7 +595,7 @@ body{
 
 </section>
 
-<!-- PARQ -->
+<!-- TEST PARQ -->
 
 <section class="section" id="pqrs">
 
@@ -594,15 +608,118 @@ body{
     <h3>Cuestionario físico previo</h3>
 
     <p>
-      Descarga el formulario PAR-Q+ para evaluar
-      seguridad antes del ejercicio.
+      Descarga el formulario PAR-Q+
+      para evaluación física previa.
     </p>
 
-    <a href="https://www.physicalactivityreadiness.com/Files/PAR-Q+%20Spanish%20Version.pdf"
-    target="_blank"
-    class="btn">
-      Descargar Test PAR-Q+
-    </a>
+    <div style="
+      display:flex;
+      gap:15px;
+      flex-wrap:wrap;
+      margin-top:20px;
+    ">
+
+      <a
+      href="https://eparmedx.com/wp-content/uploads/2023/12/Spanish.pdf"
+      target="_blank"
+      class="btn">
+
+      📄 Ver Formulario
+
+      </a>
+
+      <a
+      href="https://eparmedx.com/wp-content/uploads/2023/12/Spanish.pdf"
+      download
+      class="btn">
+
+      ⬇️ Descargar PDF
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- VINCULACIÓN -->
+
+<section class="section" id="vinculacion">
+
+  <h2 class="section-title">
+    🌟 Rutina Personalizada
+  </h2>
+
+  <div class="card">
+
+    <h3>
+      ¿Quieres una rutina según tu condición física?
+    </h3>
+
+    <p style="margin-bottom:25px">
+
+      Podemos ayudarte a crear una rutina personalizada
+      según tu edad, movilidad, enfermedades,
+      objetivos físicos y nivel de energía.
+
+      <br><br>
+
+      Solo escríbenos un mensaje y nos pondremos
+      en contacto contigo.
+
+    </p>
+
+    <form id="contactForm">
+
+      <div class="form-box">
+
+        <div class="input-card">
+
+          <label>Nombre completo</label>
+
+          <input
+          type="text"
+          id="nombre"
+          placeholder="Escribe tu nombre"
+          required>
+
+        </div>
+
+        <div class="input-card">
+
+          <label>Correo electrónico</label>
+
+          <input
+          type="email"
+          id="correo"
+          placeholder="ejemplo@gmail.com"
+          required>
+
+        </div>
+
+        <div class="input-card">
+
+          <label>Mensaje</label>
+
+          <textarea
+          id="mensaje"
+          rows="6"
+          placeholder="Cuéntanos tu condición física..."
+          required>
+          </textarea>
+
+        </div>
+
+      </div>
+
+      <button
+      type="submit"
+      class="btn">
+        Enviar Solicitud
+      </button>
+
+    </form>
 
   </div>
 
@@ -620,17 +737,54 @@ body{
 
 <script>
 
+/* ENVIAR DIAGNÓSTICO */
+
 function enviarDiagnostico(){
 
-  alert("Su mensaje ha sido enviado con éxito");
+  alert("Su mensaje ha sido enviado correctamente");
+
+  document.getElementById("observaciones").value = "";
 
 }
+
+/* GUARDAR PROGRESO */
 
 function guardarProgreso(){
 
   alert("Su mensaje se ha enviado con éxito");
 
 }
+
+/* FORMULARIO PERSONALIZADO */
+
+document
+.getElementById("contactForm")
+.addEventListener("submit", function(e){
+
+  e.preventDefault();
+
+  const nombre =
+  document.getElementById("nombre").value;
+
+  const correo =
+  document.getElementById("correo").value;
+
+  const mensaje =
+  document.getElementById("mensaje").value;
+
+  const destino =
+  "yohanorlandopol@gmail.com";
+
+  console.log("Enviar a:", destino);
+  console.log("Nombre:", nombre);
+  console.log("Correo:", correo);
+  console.log("Mensaje:", mensaje);
+
+  alert("Mensaje enviado correctamente");
+
+  document.getElementById("contactForm").reset();
+
+});
 
 </script>
 
