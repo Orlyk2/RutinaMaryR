@@ -110,7 +110,7 @@ body{
   line-height:1.6;
 }
 
-/* CARD */
+/* SECTION */
 
 .section{
   margin-top:45px;
@@ -122,11 +122,15 @@ body{
   color:#7c3aed;
 }
 
+/* GRID */
+
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
   gap:25px;
 }
+
+/* CARD */
 
 .card{
   background:rgba(255,255,255,.85);
@@ -152,7 +156,7 @@ body{
   line-height:1.7;
 }
 
-/* BOTÓN */
+/* BUTTON */
 
 .btn{
   display:inline-block;
@@ -165,13 +169,15 @@ body{
   font-weight:bold;
   transition:.3s;
   box-shadow:0 15px 35px rgba(0,0,0,.15);
+  border:none;
+  cursor:pointer;
 }
 
 .btn:hover{
   transform:translateY(-4px) scale(1.03);
 }
 
-/* DIAGNÓSTICO */
+/* FORM */
 
 .form-box{
   display:grid;
@@ -231,7 +237,7 @@ body{
   color:#374151;
 }
 
-/* PACIENTE */
+/* PATIENT */
 
 .patient-box{
   background:linear-gradient(135deg,#fbcfe8,#ddd6fe);
@@ -247,7 +253,7 @@ body{
   font-size:28px;
 }
 
-/* FLOATING BUTTON */
+/* FLOAT */
 
 .float{
   position:fixed;
@@ -323,14 +329,17 @@ body{
     <a href="#rutinas">💪 Rutinas</a>
     <a href="#salud">❤️ Salud</a>
     <a href="#progreso">📈 Progreso</a>
+    <a href="#pqrs">📄 Test PAR-Q+</a>
   </div>
 
   <div class="patient-box">
+
     <h3>Paciente</h3>
 
     <p><strong>Nombre:</strong> Mariela Rocha</p>
     <p><strong>Año:</strong> 1950</p>
-    <p><strong>Condiciones:</strong></p>
+
+    <p style="margin-top:12px"><strong>Condiciones:</strong></p>
 
     <ul style="padding-left:20px;margin-top:10px">
       <li>Hipertensión</li>
@@ -347,225 +356,257 @@ body{
 
 <div class="main">
 
-  <!-- HERO -->
+<section class="hero" id="inicio">
 
-  <section class="hero" id="inicio">
+  <h2>Bienvenida Mariela 🌸</h2>
 
-    <h2>Bienvenida Mariela 🌸</h2>
+  <p>
+    Este espacio fue creado para ayudarte a mantener tu movilidad,
+    equilibrio y bienestar de forma segura y tranquila.
+  </p>
 
-    <p>
-      Este espacio fue creado para ayudarte a mantener tu movilidad,
-      equilibrio, bienestar y fuerza de manera segura y tranquila.
-    </p>
+  <a href="#rutinas" class="btn">
+    Ver Rutinas
+  </a>
 
-    <a href="#rutinas" class="btn">
-      Ver Rutinas
-    </a>
+</section>
 
-  </section>
+<!-- DIAGNÓSTICO -->
 
-  <!-- DIAGNÓSTICO -->
+<section class="section" id="diagnostico">
 
-  <section class="section" id="diagnostico">
+  <h2 class="section-title">
+    📋 Diagnóstico Diario
+  </h2>
 
-    <h2 class="section-title">
-      📋 Diagnóstico Diario
-    </h2>
+  <div class="form-box">
 
-    <div class="form-box">
+    <div class="input-card">
 
-      <div class="input-card">
+      <label>¿Cómo se siente hoy?</label>
 
-        <label>¿Cómo se siente hoy?</label>
-
-        <select>
-          <option>Muy bien</option>
-          <option>Bien</option>
-          <option>Cansada</option>
-          <option>Con dolor</option>
-        </select>
-
-      </div>
-
-      <div class="input-card">
-
-        <label>Presión arterial</label>
-
-        <input type="text" placeholder="Ejemplo: 120/80">
-
-      </div>
-
-      <div class="input-card">
-
-        <label>Nivel de energía</label>
-
-        <input type="range">
-
-      </div>
-
-      <div class="input-card">
-
-        <label>Observaciones</label>
-
-        <textarea rows="5" placeholder="Escribe cómo se siente hoy..."></textarea>
-
-      </div>
+      <select>
+        <option>Muy bien</option>
+        <option>Bien</option>
+        <option>Cansada</option>
+        <option>Con dolor</option>
+      </select>
 
     </div>
 
-  </section>
+    <div class="input-card">
 
-  <!-- RUTINAS -->
+      <label>Presión arterial</label>
 
-  <section class="section" id="rutinas">
-
-    <h2 class="section-title">
-      💪 Rutinas Semanales
-    </h2>
-
-    <div class="grid">
-
-      <!-- LUNES -->
-
-      <div class="rutina">
-
-        <h4>Lunes</h4>
-
-        <p>Piernas y equilibrio</p>
-
-        <ul>
-          <li>Sentarse y levantarse de silla – 2x8</li>
-          <li>Elevación de talones – 2x10</li>
-          <li>Levantar rodillas sentado</li>
-          <li>Caminata suave – 10 minutos</li>
-          <li>Respiración profunda</li>
-        </ul>
-
-        <a href="#" class="btn">
-          Iniciar Rutina
-        </a>
-
-      </div>
-
-      <!-- MIÉRCOLES -->
-
-      <div class="rutina">
-
-        <h4>Miércoles</h4>
-
-        <p>Brazos y postura</p>
-
-        <ul>
-          <li>Flexiones suaves contra pared</li>
-          <li>Pesas de 1 kilo – bíceps</li>
-          <li>Bandas suaves</li>
-          <li>Movilidad de hombros</li>
-          <li>Respiración y descanso</li>
-        </ul>
-
-        <a href="#" class="btn">
-          Iniciar Rutina
-        </a>
-
-      </div>
-
-      <!-- VIERNES -->
-
-      <div class="rutina">
-
-        <h4>Viernes</h4>
-
-        <p>Rutina funcional suave</p>
-
-        <ul>
-          <li>Equilibrio con apoyo</li>
-          <li>Movilidad general</li>
-          <li>Caminata controlada</li>
-          <li>Ejercicios con balón</li>
-          <li>Estiramientos suaves</li>
-        </ul>
-
-        <a href="#" class="btn">
-          Iniciar Rutina
-        </a>
-
-      </div>
+      <input type="text" placeholder="Ejemplo: 120/80">
 
     </div>
 
-  </section>
+    <div class="input-card">
 
-  <!-- SALUD -->
+      <label>Nivel de energía</label>
 
-  <section class="section" id="salud">
-
-    <h2 class="section-title">
-      ❤️ Recomendaciones Importantes
-    </h2>
-
-    <div class="grid">
-
-      <div class="card">
-
-        <h3>Detener ejercicio si aparece:</h3>
-
-        <p>
-          Mareo, dolor en pecho, falta de aire fuerte,
-          palpitaciones o debilidad excesiva.
-        </p>
-
-      </div>
-
-      <div class="card">
-
-        <h3>Objetivos del programa</h3>
-
-        <p>
-          Mantener independencia, fortalecer piernas,
-          mejorar equilibrio y conservar movilidad.
-        </p>
-
-      </div>
-
-      <div class="card">
-
-        <h3>Frecuencia recomendada</h3>
-
-        <p>
-          Ejercicio estructurado únicamente
-          lunes, miércoles y viernes.
-        </p>
-
-      </div>
+      <input type="range">
 
     </div>
 
-  </section>
+    <div class="input-card">
 
-  <!-- PROGRESO -->
+      <label>Observaciones</label>
 
-  <section class="section" id="progreso">
+      <textarea rows="5" placeholder="Escribe cómo se siente hoy..."></textarea>
 
-    <h2 class="section-title">
-      📈 Seguimiento
-    </h2>
+      <button class="btn" onclick="enviarDiagnostico()">
+        Enviar
+      </button>
 
-    <div class="card">
+    </div>
 
-      <h3>Registro semanal</h3>
+  </div>
 
-      <p>
-        Aquí puedes llevar el control de presión arterial,
-        energía, caminatas, fuerza y evolución general.
-      </p>
+</section>
 
-      <a href="#" class="btn">
-        Guardar progreso
+<!-- RUTINAS -->
+
+<section class="section" id="rutinas">
+
+  <h2 class="section-title">
+    💪 Rutinas Semanales
+  </h2>
+
+  <div class="grid">
+
+    <!-- LUNES -->
+
+    <div class="rutina">
+
+      <h4>Lunes</h4>
+
+      <p>Piernas y equilibrio</p>
+
+      <ul>
+        <li>Sentarse y levantarse de silla – 2x8</li>
+        <li>Elevación de talones – 2x10</li>
+        <li>Levantar rodillas sentado</li>
+        <li>Caminata suave – 10 minutos</li>
+      </ul>
+
+      <a href="https://www.youtube.com/watch?v=4BOTvaRaDjI"
+      target="_blank"
+      class="btn">
+        Iniciar Rutina
       </a>
 
     </div>
 
-  </section>
+    <!-- MIÉRCOLES -->
+
+    <div class="rutina">
+
+      <h4>Miércoles</h4>
+
+      <p>Brazos y postura</p>
+
+      <ul>
+        <li>Flexiones suaves contra pared</li>
+        <li>Pesas de 1 kilo</li>
+        <li>Bandas suaves</li>
+        <li>Movilidad de hombros</li>
+      </ul>
+
+      <a href="https://www.youtube.com/watch?v=VHyGqsPOUHs"
+      target="_blank"
+      class="btn">
+        Iniciar Rutina
+      </a>
+
+    </div>
+
+    <!-- VIERNES -->
+
+    <div class="rutina">
+
+      <h4>Viernes</h4>
+
+      <p>Rutina funcional suave</p>
+
+      <ul>
+        <li>Equilibrio con apoyo</li>
+        <li>Movilidad general</li>
+        <li>Caminata controlada</li>
+        <li>Ejercicios con balón</li>
+      </ul>
+
+      <a href="https://www.youtube.com/watch?v=8CE4ijWlQ18"
+      target="_blank"
+      class="btn">
+        Iniciar Rutina
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- SALUD -->
+
+<section class="section" id="salud">
+
+  <h2 class="section-title">
+    ❤️ Recomendaciones Importantes
+  </h2>
+
+  <div class="grid">
+
+    <div class="card">
+
+      <h3>Detener ejercicio si aparece:</h3>
+
+      <p>
+        Mareo, dolor en pecho, palpitaciones,
+        sudor frío o falta de aire fuerte.
+      </p>
+
+    </div>
+
+    <div class="card">
+
+      <h3>Objetivos del programa</h3>
+
+      <p>
+        Mantener independencia, fuerza funcional,
+        equilibrio y movilidad.
+      </p>
+
+    </div>
+
+    <div class="card">
+
+      <h3>Frecuencia recomendada</h3>
+
+      <p>
+        Ejercicio únicamente lunes,
+        miércoles y viernes.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- PROGRESO -->
+
+<section class="section" id="progreso">
+
+  <h2 class="section-title">
+    📈 Seguimiento
+  </h2>
+
+  <div class="card">
+
+    <h3>Registro semanal</h3>
+
+    <p>
+      Guarda observaciones sobre energía,
+      caminatas, presión arterial y evolución.
+    </p>
+
+    <button class="btn" onclick="guardarProgreso()">
+      Guardar progreso
+    </button>
+
+  </div>
+
+</section>
+
+<!-- PARQ -->
+
+<section class="section" id="pqrs">
+
+  <h2 class="section-title">
+    📄 Descarga Test PAR-Q+
+  </h2>
+
+  <div class="card">
+
+    <h3>Cuestionario físico previo</h3>
+
+    <p>
+      Descarga el formulario PAR-Q+ para evaluar
+      seguridad antes del ejercicio.
+    </p>
+
+    <a href="https://www.physicalactivityreadiness.com/Files/PAR-Q+%20Spanish%20Version.pdf"
+    target="_blank"
+    class="btn">
+      Descargar Test PAR-Q+
+    </a>
+
+  </div>
+
+</section>
 
 </div>
 
@@ -574,6 +615,24 @@ body{
 <a href="#" class="float">
   ❤️
 </a>
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+function enviarDiagnostico(){
+
+  alert("Su mensaje ha sido enviado con éxito");
+
+}
+
+function guardarProgreso(){
+
+  alert("Su mensaje se ha enviado con éxito");
+
+}
+
+</script>
 
 </body>
 </html>
