@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>miRutinaPersonal | Mariela Rocha</title>
+
+<meta property="og:title" content="miRutinaPersonal | Bienestar y Rutinas" />
+<meta property="og:description" content="Rutinas suaves, seguimiento diario y bienestar para Mariela Rocha." />
+<meta property="og:type" content="website" />
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI',sans-serif;
+}
+
+body{
+  background:linear-gradient(135deg,#fdf2f8,#eef2ff,#ecfeff);
+  color:#1f2937;
+  overflow-x:hidden;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+  position:fixed;
+  left:0;
+  top:0;
+  width:280px;
+  height:100vh;
+  background:rgba(255,255,255,.85);
+  backdrop-filter:blur(12px);
+  border-right:1px solid rgba(255,255,255,.4);
+  padding:30px 20px;
+  box-shadow:0 20px 50px rgba(0,0,0,.08);
+  z-index:1000;
+}
+
+.logo{
+  margin-bottom:40px;
+}
+
+.logo h1{
+  font-size:32px;
+  color:#db2777;
+  margin-bottom:8px;
+}
+
+.logo p{
+  color:#6b7280;
+  font-size:14px;
+}
+
+.menu{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
+
+.menu a{
+  text-decoration:none;
+  color:#374151;
+  background:#fff;
+  padding:16px;
+  border-radius:18px;
+  transition:.3s;
+  box-shadow:0 10px 25px rgba(0,0,0,.05);
+  font-weight:600;
+}
+
+.menu a:hover{
+  transform:translateX(6px);
+  background:linear-gradient(135deg,#f9a8d4,#c4b5fd);
+  color:#fff;
+}
+
+/* MAIN */
+
+.main{
+  margin-left:300px;
+  padding:40px;
+}
+
+/* HERO */
+
+.hero{
+  background:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),
+  url('https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=1600');
+  background-size:cover;
+  background-position:center;
+  border-radius:35px;
+  padding:90px 40px;
+  color:#fff;
+  box-shadow:0 25px 60px rgba(0,0,0,.15);
+}
+
+.hero h2{
+  font-size:52px;
+  margin-bottom:15px;
+}
+
+.hero p{
+  font-size:20px;
+  max-width:700px;
+  line-height:1.6;
+}
+
+/* CARD */
+
+.section{
+  margin-top:45px;
+}
+
+.section-title{
+  font-size:34px;
+  margin-bottom:25px;
+  color:#7c3aed;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
+}
+
+.card{
+  background:rgba(255,255,255,.85);
+  backdrop-filter:blur(10px);
+  border-radius:28px;
+  padding:28px;
+  box-shadow:0 20px 50px rgba(0,0,0,.08);
+  transition:.35s;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+}
+
+.card h3{
+  margin-bottom:15px;
+  color:#db2777;
+  font-size:24px;
+}
+
+.card p{
+  color:#4b5563;
+  line-height:1.7;
+}
+
+/* BOTÓN */
+
+.btn{
+  display:inline-block;
+  margin-top:20px;
+  background:linear-gradient(135deg,#ec4899,#8b5cf6);
+  color:#fff;
+  text-decoration:none;
+  padding:14px 24px;
+  border-radius:999px;
+  font-weight:bold;
+  transition:.3s;
+  box-shadow:0 15px 35px rgba(0,0,0,.15);
+}
+
+.btn:hover{
+  transform:translateY(-4px) scale(1.03);
+}
+
+/* DIAGNÓSTICO */
+
+.form-box{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
+
+.input-card{
+  background:#fff;
+  padding:24px;
+  border-radius:24px;
+  box-shadow:0 15px 40px rgba(0,0,0,.06);
+}
+
+.input-card label{
+  display:block;
+  margin-bottom:10px;
+  font-weight:bold;
+  color:#7c3aed;
+}
+
+.input-card input,
+.input-card select,
+.input-card textarea{
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:16px;
+  background:#f3f4f6;
+  outline:none;
+  font-size:15px;
+}
+
+/* RUTINAS */
+
+.rutina{
+  background:#fff;
+  border-radius:28px;
+  padding:30px;
+  box-shadow:0 20px 50px rgba(0,0,0,.07);
+}
+
+.rutina h4{
+  font-size:28px;
+  color:#8b5cf6;
+  margin-bottom:12px;
+}
+
+.rutina ul{
+  margin-top:15px;
+  padding-left:20px;
+}
+
+.rutina li{
+  margin-bottom:12px;
+  line-height:1.6;
+  color:#374151;
+}
+
+/* PACIENTE */
+
+.patient-box{
+  background:linear-gradient(135deg,#fbcfe8,#ddd6fe);
+  padding:28px;
+  border-radius:30px;
+  color:#374151;
+  margin-top:40px;
+  box-shadow:0 20px 50px rgba(0,0,0,.08);
+}
+
+.patient-box h3{
+  margin-bottom:16px;
+  font-size:28px;
+}
+
+/* FLOATING BUTTON */
+
+.float{
+  position:fixed;
+  bottom:25px;
+  right:25px;
+  width:70px;
+  height:70px;
+  border-radius:50%;
+  background:linear-gradient(135deg,#ec4899,#8b5cf6);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  font-size:30px;
+  text-decoration:none;
+  box-shadow:0 20px 40px rgba(0,0,0,.25);
+  animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+  0%{
+    box-shadow:0 0 0 0 rgba(236,72,153,.5);
+  }
+
+  70%{
+    box-shadow:0 0 0 20px rgba(236,72,153,0);
+  }
+
+  100%{
+    box-shadow:0 0 0 0 rgba(236,72,153,0);
+  }
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+  .sidebar{
+    position:relative;
+    width:100%;
+    height:auto;
+    border-radius:0 0 30px 30px;
+  }
+
+  .main{
+    margin-left:0;
+    padding:20px;
+  }
+
+  .hero h2{
+    font-size:38px;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+
+<div class="sidebar">
+
+  <div class="logo">
+    <h1>miRutinaPersonal</h1>
+    <p>Bienestar y movimiento saludable</p>
+  </div>
+
+  <div class="menu">
+    <a href="#inicio">🏠 Inicio</a>
+    <a href="#diagnostico">📋 Diagnóstico Diario</a>
+    <a href="#rutinas">💪 Rutinas</a>
+    <a href="#salud">❤️ Salud</a>
+    <a href="#progreso">📈 Progreso</a>
+  </div>
+
+  <div class="patient-box">
+    <h3>Paciente</h3>
+
+    <p><strong>Nombre:</strong> Mariela Rocha</p>
+    <p><strong>Año:</strong> 1950</p>
+    <p><strong>Condiciones:</strong></p>
+
+    <ul style="padding-left:20px;margin-top:10px">
+      <li>Hipertensión</li>
+      <li>Hipotiroidismo</li>
+      <li>Antecedente cardíaco</li>
+      <li>Poca fuerza muscular</li>
+    </ul>
+
+  </div>
+
+</div>
+
+<!-- MAIN -->
+
+<div class="main">
+
+  <!-- HERO -->
+
+  <section class="hero" id="inicio">
+
+    <h2>Bienvenida Mariela 🌸</h2>
+
+    <p>
+      Este espacio fue creado para ayudarte a mantener tu movilidad,
+      equilibrio, bienestar y fuerza de manera segura y tranquila.
+    </p>
+
+    <a href="#rutinas" class="btn">
+      Ver Rutinas
+    </a>
+
+  </section>
+
+  <!-- DIAGNÓSTICO -->
+
+  <section class="section" id="diagnostico">
+
+    <h2 class="section-title">
+      📋 Diagnóstico Diario
+    </h2>
+
+    <div class="form-box">
+
+      <div class="input-card">
+
+        <label>¿Cómo se siente hoy?</label>
+
+        <select>
+          <option>Muy bien</option>
+          <option>Bien</option>
+          <option>Cansada</option>
+          <option>Con dolor</option>
+        </select>
+
+      </div>
+
+      <div class="input-card">
+
+        <label>Presión arterial</label>
+
+        <input type="text" placeholder="Ejemplo: 120/80">
+
+      </div>
+
+      <div class="input-card">
+
+        <label>Nivel de energía</label>
+
+        <input type="range">
+
+      </div>
+
+      <div class="input-card">
+
+        <label>Observaciones</label>
+
+        <textarea rows="5" placeholder="Escribe cómo se siente hoy..."></textarea>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- RUTINAS -->
+
+  <section class="section" id="rutinas">
+
+    <h2 class="section-title">
+      💪 Rutinas Semanales
+    </h2>
+
+    <div class="grid">
+
+      <!-- LUNES -->
+
+      <div class="rutina">
+
+        <h4>Lunes</h4>
+
+        <p>Piernas y equilibrio</p>
+
+        <ul>
+          <li>Sentarse y levantarse de silla – 2x8</li>
+          <li>Elevación de talones – 2x10</li>
+          <li>Levantar rodillas sentado</li>
+          <li>Caminata suave – 10 minutos</li>
+          <li>Respiración profunda</li>
+        </ul>
+
+        <a href="#" class="btn">
+          Iniciar Rutina
+        </a>
+
+      </div>
+
+      <!-- MIÉRCOLES -->
+
+      <div class="rutina">
+
+        <h4>Miércoles</h4>
+
+        <p>Brazos y postura</p>
+
+        <ul>
+          <li>Flexiones suaves contra pared</li>
+          <li>Pesas de 1 kilo – bíceps</li>
+          <li>Bandas suaves</li>
+          <li>Movilidad de hombros</li>
+          <li>Respiración y descanso</li>
+        </ul>
+
+        <a href="#" class="btn">
+          Iniciar Rutina
+        </a>
+
+      </div>
+
+      <!-- VIERNES -->
+
+      <div class="rutina">
+
+        <h4>Viernes</h4>
+
+        <p>Rutina funcional suave</p>
+
+        <ul>
+          <li>Equilibrio con apoyo</li>
+          <li>Movilidad general</li>
+          <li>Caminata controlada</li>
+          <li>Ejercicios con balón</li>
+          <li>Estiramientos suaves</li>
+        </ul>
+
+        <a href="#" class="btn">
+          Iniciar Rutina
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- SALUD -->
+
+  <section class="section" id="salud">
+
+    <h2 class="section-title">
+      ❤️ Recomendaciones Importantes
+    </h2>
+
+    <div class="grid">
+
+      <div class="card">
+
+        <h3>Detener ejercicio si aparece:</h3>
+
+        <p>
+          Mareo, dolor en pecho, falta de aire fuerte,
+          palpitaciones o debilidad excesiva.
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <h3>Objetivos del programa</h3>
+
+        <p>
+          Mantener independencia, fortalecer piernas,
+          mejorar equilibrio y conservar movilidad.
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <h3>Frecuencia recomendada</h3>
+
+        <p>
+          Ejercicio estructurado únicamente
+          lunes, miércoles y viernes.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- PROGRESO -->
+
+  <section class="section" id="progreso">
+
+    <h2 class="section-title">
+      📈 Seguimiento
+    </h2>
+
+    <div class="card">
+
+      <h3>Registro semanal</h3>
+
+      <p>
+        Aquí puedes llevar el control de presión arterial,
+        energía, caminatas, fuerza y evolución general.
+      </p>
+
+      <a href="#" class="btn">
+        Guardar progreso
+      </a>
+
+    </div>
+
+  </section>
+
+</div>
+
+<!-- FLOAT -->
+
+<a href="#" class="float">
+  ❤️
+</a>
+
+</body>
+</html>
